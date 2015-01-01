@@ -1,0 +1,20 @@
+class primeNumbers {
+    public static void main(String[] args) {
+        boolean [] allPrimes = new boolean[MAX_PRIMES];
+        allPrimes[0] = false;
+        allPrimes[1] = false;
+        for (int i = 2; i < MAX_PRIMES; i++) {
+            for (int j = 2; j < 32; i++) {
+                if (i%j==0) {
+                    allPrimes[i] = false;
+                }
+            }
+        }
+        for (int x = 0; x < MAX_PRIMES; x++) {
+            if (allPrimes[x]==true) {
+                System.out.println(allPrimes[x]);
+            }
+        }   
+    }
+    public static final int MAX_PRIMES = 1000;
+}
